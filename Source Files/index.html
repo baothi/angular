@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script language="javascript" src="app/components/angular.min.js"></script>
+    <script language="javascript" src="app/app.js"></script>
+  </head>
+  <body>
+    <div ng-app="myapp">
+      <!-- <div ng-controller="ShowMessage">
+        {{message}}
+        {{title}}
+        {{data.message}}
+      </div> -->
+      <div ng-controller="controller1">
+        <input type="text" ng-model="data.message"/>
+        {{data.message}}
+      </div>
+      <div ng-controller="controller2">
+        <input type="text" ng-model="data.messages"/>
+        {{data.message}}
+      </div>
+      <div ng-controller="maytinh">
+        <input type="text" ng-model="so1"> <br/>
+        <input type="text" ng-model="so2"> <br/>
+        <select ng-model="pheptoan">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">:</option>
+        </select>
+        <button ng-click="tinh()" > xem ket qua</button>
+        {{ketqua}}
+      </div>
+    </div>
+  </body>
+</html>
