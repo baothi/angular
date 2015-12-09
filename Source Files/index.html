@@ -8,11 +8,7 @@
   </head>
   <body>
     <div ng-app="myapp">
-      <!-- <div ng-controller="ShowMessage">
-        {{message}}
-        {{title}}
-        {{data.message}}
-      </div> -->
+      <!-- phần 1 -->
       <div ng-controller="controller1">
         <input type="text" ng-model="data.message"/>
         {{data.message}}
@@ -20,7 +16,8 @@
       <div ng-controller="controller2">
         <input type="text" ng-model="data.messages"/>
         {{data.message}}
-      </div>
+      </div><br/>
+      <!-- phần 2 -->
       <div ng-controller="maytinh">
         <input type="text" ng-model="so1"> <br/>
         <input type="text" ng-model="so2"> <br/>
@@ -32,7 +29,26 @@
         </select>
         <button ng-click="tinh()" > xem ket qua</button>
         {{ketqua}}
-      </div>
-    </div>
+      </div> <br/>
+      <!-- phần 3 -->
+      <div ng-controller="loginController">
+        <div ng-formlogin></div>
+    </div><br/>
+    <!-- phần 4 -->
+    <div ng-controller="MessageController">
+     <div message>
+       content here
+     </div>
+    </div><br/>
+   <!-- // phần 6 Directive Linking -->
+    <div ng-controller="MessageController1">
+      <message>noi dung</message>
+    </div><br/>
+   <!-- Phần 7 Diẻctive Íolating -->
+    <div ng-controller="MessageController1">
+     <message>noi dung</message>
+    </div><br/>
+
   </body>
 </html>
+<!-- https://www.youtube.com/watch?v=O2vRos43p9U&index=12&list=PLVDrFuSRIRPXyrolQfU3GxTP-lPcbYm8H -->
