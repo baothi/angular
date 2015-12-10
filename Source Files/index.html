@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>angularjs</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script language="javascript" src="app/components/angular.min.js"></script>
     <script language="javascript" src="app/app.js"></script>
@@ -33,22 +33,80 @@
       <!-- phần 3 -->
       <div ng-controller="loginController">
         <div ng-formlogin></div>
-    </div><br/>
+      </div><br/>
     <!-- phần 4 -->
-    <div ng-controller="MessageController">
-     <div message>
-       content here
-     </div>
-    </div><br/>
+      <div ng-controller="MessageController">
+        <div message> content here </div>
+      </div><br/>
    <!-- // phần 6 Directive Linking -->
-    <div ng-controller="MessageController1">
-      <message>noi dung</message>
-    </div><br/>
+      <div ng-controller="MessageController1">
+        <message>noi dung</message>
+      </div><br/>
    <!-- Phần 7 Diẻctive Íolating -->
-    <div ng-controller="MessageController1">
-     <message>noi dung</message>
-    </div><br/>
 
+      <div ng-controller="MessageCtrl">
+        <message show="showMessage(message1)"></message>
+      </div><br/>
+      <!-- // Phần 8 tìm hiểu về ký tự @ trong directive Isolating -->
+      <div ng-controller="MyController">
+        <div message content="{{ctrContent}}"></div>
+      </div>
+      <!-- // Phần 9 tìm hiểu về Controller Return  -->
+      <div ng-controller="LoginCtrl">
+        Username: <input type="text" ng-model="username"/><br/>
+        Password: <input type="password" ng-model="password"/><br/>
+        <input type="button" ng-click="CtrlTmp.checkLogin()" value="Login"/>
+      </div><br/>
+      <!-- // Phần 10 tìm hiểu về repeat loop  -->
+      <div ng-controller="studentCtrl">
+        <table cellpadding="0" cellspacing="0" border="1">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Blog</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="student in students">
+              <td>{{student.name}}</td>
+              <td>{{student.age}}</td>
+              <td>{{student.blog}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><br/>
+
+      <div ng-controller="studentCtrl">
+        <table cellpadding="0" cellspacing="0" border="1">
+          <thead>
+            <tr>
+              <th>$index kiểm tra các vòng lập </th>
+              <th>$first kiểm tra có phải là lần lập đầu tiên hay không </th>
+              <th>$middle trong 10 lần lập thì đây có phải là lần lập thứ 5 không </th>
+              <th>$lát kiểm tra lần lập cuối </th>
+              <th>$even kiểm tra vòng lập chẳn </th>
+              <th>$odd kiểm tra vòng lập lẽ </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="student in students">
+              <td>{{$index}}</td>
+              <td>{{$first}}</td>
+              <td>{{$middle}}</td>
+              <td>{{$last}}</td>
+              <td>{{$even}}</td>
+              <td>{{$odd}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+    </div>
   </body>
 </html>
-<!-- https://www.youtube.com/watch?v=O2vRos43p9U&index=12&list=PLVDrFuSRIRPXyrolQfU3GxTP-lPcbYm8H -->
+
+<!-- https://www.youtube.com/watch?v=3f3xIfkm2AU&index=20&list=PLVDrFuSRIRPXyrolQfU3GxTP-lPcbYm8H -->
